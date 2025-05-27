@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>css z-index</title>
+    <style>
+      div {
+        position: absolute;
+      }
+
+      img {
+        position: absolute;
+        width: 100px;
+        height: 140px;
+      }
+
+      #spadeA {
+        z-index: -3;
+        left: 10px;
+        top: 20px;
+      }
+      #spade2 {
+        z-index: 2;
+        left: 40px;
+        top: 30px;
+      }
+      #spade3 {
+        z-index: 3;
+        left: 80px;
+        top: 40px;
+      }
+      #spade7 {
+        z-index: 7;
+        left: 120px;
+        top: 50px;
+      }
+    </style>
+  </head>
+  <body>
+    <h3>css z-index</h3>
+    <hr />
+    <div>
+      <img src="../media/spadeA.png" alt="spadeA" id="spadeA" />
+      <img src="../media/spade2.png" alt="spade2" id="spade2" />
+      <img src="../media/spade3.png" alt="spade3" id="spade3" />
+      <img src="../media/spade7.png" alt="spade7" id="spade7" />
+    </div>
+  </body>
+</html>

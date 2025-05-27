@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>css position relative</title>
+    <style>
+      div {
+        display: inline-block; /* inline 이면서 block-box 처럼 높이 넓이를 조절 가능 */
+        height: 50px;
+        width: 50px;
+        border: 1px solid lightgray;
+        text-align: center;
+        color: white;
+        background: red;
+      }
+
+      #down:hover {
+        position: relative; /* 원래 출려되는 위치에 대해서 상대적으로 */
+        left: 20px;
+        top: 20px;
+        background: green;
+      }
+
+      #up:hover {
+        position: relative;
+        right: 20px;
+        bottom: 20px;
+        background: green;
+      }
+    </style>
+  </head>
+  <body>
+    <h3>css position relative</h3>
+    h와 k 위에 마우스를 올려보세요
+    <hr />
+    <div>T</div>
+    <div id="down">h</div>
+    <div>a</div>
+    <div id="up">k</div>
+    <div>s</div>
+  </body>
+</html>
