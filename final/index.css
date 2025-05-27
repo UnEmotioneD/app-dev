@@ -18,18 +18,19 @@ body {
   font-size: 16px;
 }
 
-/* specify height only to keep the original ratio of the media */
-video {
-  height: 500px;
-}
-
-img {
-  height: 500px;
-}
-
 /* change the size of image for logo separately */
 #logo {
   height: 100px;
+}
+
+aside,
+main,
+#jump {
+  display: inline-block;
+}
+
+aside {
+  width: 250px;
 }
 
 /* font in sidebar to be smaller then others (16px) */
@@ -45,4 +46,27 @@ aside a {
 /* first letter of the paragraph to be the 2 times of it's default size */
 main p::first-letter {
   font-size: 2em;
+}
+
+/* specify height only to keep the original ratio of the media */
+video {
+  height: 500px;
+}
+
+img {
+  height: 500px;
+}
+
+footer {
+  background-color: lightgray;
+  height: 150px;
+  margin-top: 50px;
+
+  /* display flex to center child elements */
+  display: flex;
+}
+
+footer > a {
+  /* center a tag with margin */
+  margin: auto;
 }
