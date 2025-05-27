@@ -1,0 +1,48 @@
+/* border for debugging */
+* {
+  border: 1px solid #000;
+}
+
+/* scroll smootly when jumping between tags */
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  /* remove default padding and margin */
+  padding: 0;
+  margin: 0;
+
+  /* specify what font to use and sizes */
+  font-family: "JetBrains Mono", monospace;
+  font-size: 16px;
+}
+
+/* specify height only to keep the original ratio of the media */
+video {
+  height: 500px;
+}
+
+img {
+  height: 500px;
+}
+
+/* change the size of image for logo separately */
+#logo {
+  height: 100px;
+}
+
+/* font in sidebar to be smaller then others (16px) */
+aside > ul > li {
+  font-size: 14px;
+}
+
+/* a tag text in sidebar to always be black (not blue and purple) */
+aside a {
+  color: #000;
+}
+
+/* first letter of the paragraph to be the 2 times of it's default size */
+main p::first-letter {
+  font-size: 2em;
+}
