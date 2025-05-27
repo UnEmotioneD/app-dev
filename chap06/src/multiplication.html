@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>multiplication</title>
+    <script>
+      function multiplication() {
+        let m = parseInt(n);
+        if (isNaN(m) || m < 1 || m > 9) {
+          alert("Invalid input. Please enter a number between 1 and 9.");
+          return;
+        }
+
+        for (let i = 1; i <= 9; i++) {
+          document.write(m + " x " + i + " = " + m * i + "<br>");
+        }
+      }
+    </script>
+  </head>
+  <body>
+    <h3>multiplication</h3>
+    <hr />
+  </body>
+  <script>
+    let n = prompt("Which multiplication table would you like to see?", "");
+    multiplication(n);
+  </script>
+</html>
