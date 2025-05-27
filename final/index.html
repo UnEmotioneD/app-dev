@@ -9,7 +9,7 @@
     <!-- link to js for current html file -->
     <script src="./index.js"></script>
     <!-- link to css for current html file -->
-    <link rel="stylesheet" type="text/css" href="index.css" />
+    <link rel="stylesheet" href="index.css" />
     <!-- use jetbrains mono font -->
     <link
       rel="stylesheet"
@@ -23,55 +23,56 @@
     </header>
 
     <!-- put sidebar to the left -->
-    <aside>
-      <ul>
-        <li><a href="#arch">Arch Linux</a></li>
-        <li><a href="#hypr">Hyprland</a></li>
-        <li><a href="#alacritty">Alacritty</a></li>
-        <li><a href="#tmux">TMUX</a></li>
-        <li><a href="#nvim">NeoVim</a></li>
-        <li><a href="#splitkb">Split Keyboards</a></li>
-      </ul>
-    </aside>
+    <div id="wrapper">
+      <aside>
+        <ul>
+          <li><a href="#arch">Arch Linux</a></li>
+          <li><a href="#hypr">Hyprland</a></li>
+          <li><a href="#alacritty">Alacritty</a></li>
+          <li><a href="#tmux">TMUX</a></li>
+          <li><a href="#nvim">NeoVim</a></li>
+          <li><a href="#splitkb">Split Keyboards</a></li>
+        </ul>
+      </aside>
 
-    <main>
-      <!-- set thumbnail with poster property -->
-      <video
-        src="./media/my_workflow.mp4"
-        type="video/mp4"
-        poster="./media/my_workflow_tb.png"
-        controls
-      >
-        Your browser does not support the video tag.
-      </video>
+      <main>
+        <!-- set thumbnail with poster property -->
+        <video
+          src="./media/my_workflow.mp4"
+          poster="./media/my_workflow_tb.png"
+          controls
+        >
+          Your browser does not support the video tag.
+        </video>
 
-      <h2 id="arch">Arch Linux</h2>
-      <p>I USE ARCH BTW</p>
+        <h2 id="arch">Arch Linux</h2>
+        <p>I USE ARCH BTW</p>
 
-      <h2 id="hypr">Hyprland</h2>
-      <p>Tiling window manager</p>
+        <h2 id="hypr">Hyprland</h2>
+        <p>Tiling window manager</p>
 
-      <h2 id="alacritty">Alacritty</h2>
-      <p>Terminal emulator</p>
+        <h2 id="alacritty">Alacritty</h2>
+        <p>Terminal emulator</p>
 
-      <h2 id="tmux">TMUX</h2>
-      <p>Terminal Multi Plexer</p>
+        <h2 id="tmux">TMUX</h2>
+        <p>Terminal Multi Plexer</p>
 
-      <h2 id="nvim">NeoVim</h2>
-      <p>Terminal text editor</p>
+        <h2 id="nvim">NeoVim</h2>
+        <p>Terminal text editor</p>
 
-      <h2 id="splitkb">Split keyboards</h2>
-      <p>Keyboard for real nerds</p>
-      <img src="./media/split_keyboards.png" alt="split_keyboards" />
-    </main>
+        <h2 id="splitkb">Split keyboards</h2>
+        <p>Keyboard for real nerds</p>
+        <img src="./media/split_keyboards.png" alt="split_keyboards" />
+      </main>
 
-    <!-- place it at the bottom right -->
-    <div id="jump">
-      <div id="up">
-        <a href="#top"><img src="./media/" alt="up" /></a>
-      </div>
-      <div id="down">
-        <a href="#bottom"><img src="./media/" alt="down" /></a>
+      <!-- place it at the bottom right -->
+      <div id="jump">
+        <div id="up">
+          <a href="#top"><img src="./media/arrow_up.png" alt="up" /></a>
+        </div>
+        <div id="down">
+          <a href="#bottom"><img src="./media/arrow_down.png" alt="down" /></a>
+        </div>
       </div>
     </div>
 
@@ -80,6 +81,7 @@
       <a
         href="https://github.com/UnEmotioneD/app-dev/tree/main/final"
         target="_blank"
+        rel="noopener noreferrer"
         >github.com</a
       >
     </footer>

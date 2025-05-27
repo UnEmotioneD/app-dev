@@ -23,24 +23,30 @@ body {
   height: 100px;
 }
 
+#wrapper {
+  display: flex;
+}
+
 aside,
 main,
 #jump {
-  display: inline-block;
+  margin: 25px;
 }
 
 aside {
+  float: left;
   width: 250px;
 }
+aside a {
+  /* a tag text in sidebar to always be black (not blue and purple) */
+  color: #000;
 
-/* font in sidebar to be smaller then others (16px) */
-aside > ul > li {
+  /* font in sidebar to be smaller then others (16px) */
   font-size: 14px;
 }
-
-/* a tag text in sidebar to always be black (not blue and purple) */
-aside a {
-  color: #000;
+aside a:hover {
+  text-decoration: underline;
+  color: darkgray;
 }
 
 /* first letter of the paragraph to be the 2 times of it's default size */
@@ -48,24 +54,35 @@ main p::first-letter {
   font-size: 2em;
 }
 
-/* specify height only to keep the original ratio of the media */
+/* specify height only and width to auto for keeping the original ratio of the media */
 video {
   height: 500px;
+  width: auto;
 }
 
-img {
+main img {
   height: 500px;
+  width: auto;
+}
+
+#jump {
+  float: right;
+
+  margin-top: auto;
+  margin-bottom: auto;
+}
+#jump img {
+  height: 60px;
+  width: auto;
 }
 
 footer {
   background-color: lightgray;
   height: 150px;
-  margin-top: 50px;
 
   /* display flex to center child elements */
   display: flex;
 }
-
 footer > a {
   /* center a tag with margin */
   margin: auto;
