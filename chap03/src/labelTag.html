@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>label tag</title>
+    <style>
+      img {
+        width: 100px;
+      }
+    </style>
+  </head>
+  <body>
+    <h3>label tag</h3>
+    <hr />
+    <form action="">
+      <!-- label 태그로 감싸서 input 태그가 아닌것을 클릭해도 선택됨 -->
+      <label>
+        <input type="radio" name="chinese" value="1" />
+        짜장면<img src="./media/jjajang.png" alt="짜장면" /><br />
+      </label>
+
+      <label
+        ><input type="radio" name="chinese" value="2" /> 짬뽕<img
+          src="./media/jjambbong.png"
+          alt="짬뽕" /><br
+      /></label>
+
+      <label
+        ><input type="radio" name="chinese" value="3" /> 볶음밥<img
+          src="./media/tangsuyuk.png"
+          alt="볶음밥" /><br
+      /></label>
+
+      <label
+        ><input type="radio" name="western" value="4" checked /> 피자<img
+          src="./media/pizza.png"
+          alt="피자" /><br
+      /></label>
+    </form>
+  </body>
+</html>

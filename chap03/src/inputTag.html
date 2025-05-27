@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>input tag</title>
+  </head>
+  <body>
+    <h3>input tag</h3>
+    <hr />
+    <form>
+      나라:
+      <input type="text" list="countries" /><br />
+      <!-- datalist: 입력을 하면 비슷한것을 보여준다 -->
+      <!-- firefox에서는 정상 동작하지 않음 -->
+      <datalist id="countries">
+        <option value="가나"></option>
+        <option value="스위스"></option>
+        <option value="브라질"></option>
+      </datalist>
+
+      보고싶은것:
+      <input type="text" list="what" /><br />
+      <datalist id="what">
+        <option value="산"></option>
+        <option value="바다"></option>
+        <option value="도시"></option>
+      </datalist>
+
+      먹고 싶은것:
+      <input type="text" list="food" /><br />
+      <datalist id="food">
+        <option value="짜장면"></option>
+        <option value="짬뽕"></option>
+        <option value="국밥"></option>
+      </datalist>
+    </form>
+  </body>
+</html>
