@@ -1,0 +1,36 @@
+body.main {
+  background: aliceblue;
+}
+
+h3,
+li {
+  color: brown;
+}
+
+h3:first-letter {
+  color: red;
+}
+
+div > div > strong {
+  background: yellow;
+}
+
+ul strong {
+  color: dodgerblue;
+}
+
+#list {
+  background: mistyrose;
+}
+
+#list span {
+  color: forestgreen;
+}
+
+li:hover {
+  background: yellowgreen;
+}
+
+.warning {
+  color: red;
+}
