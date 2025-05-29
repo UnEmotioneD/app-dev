@@ -51,15 +51,19 @@ aside a:hover {
   color: darkgray;
 }
 
+main {
+  /* 80% of parent element's width (wrapper div) */
+  width: 80%;
+}
+
 /* first letter of the paragraph to be the 2 times of it's default size */
 main p::first-letter {
   font-size: 2em;
 }
 
-/* specify height only and width to auto for keeping the original ratio of the media */
 video {
-  height: 500px;
-  width: auto;
+  /* width of the video to full width of main div */
+  width: 100%;
 }
 
 main img {
