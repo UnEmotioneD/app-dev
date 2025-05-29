@@ -1,6 +1,8 @@
-/* border for debugging */
 * {
+  /* border for debugging */
   border: 1px solid #000;
+  /* keep the border inside the padding */
+  box-sizing: border-box;
 }
 
 /* scroll smootly when jumping between tags */
