@@ -30,8 +30,7 @@ body {
 }
 
 aside,
-main,
-#jump {
+main {
   margin: 25px;
 }
 
@@ -72,10 +71,10 @@ main img {
 }
 
 #jump {
-  float: right;
+  position: fixed;
 
-  margin-top: auto;
-  margin-bottom: auto;
+  right: 25px;
+  bottom: 25px;
 }
 #jump img {
   height: 60px;
