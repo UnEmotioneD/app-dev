@@ -73,6 +73,7 @@ main p::first-letter {
   font-size: 2em;
 }
 
+/* too have space at the start of each sentence */
 .spaced {
   margin-left: 1em;
 }
