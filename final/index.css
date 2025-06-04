@@ -90,7 +90,7 @@ main p::first-letter {
 }
 
 /* too have space at the start of each sentence */
-.spaced {
+main > p > span {
   margin-left: 1em;
 }
 
