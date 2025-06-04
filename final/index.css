@@ -20,6 +20,22 @@ body {
   font-size: 16px;
 }
 
+/* center elements inside header */
+header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  height: 100px;
+}
+
+/* keep the logo to top left  */
+#logo {
+  position: absolute;
+  left: 0;
+  height: 50px; /* adjust as needed */
+}
+
 /* change the size of image for logo separately */
 #logo {
   height: 100px;
