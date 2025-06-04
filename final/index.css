@@ -73,6 +73,10 @@ main p::first-letter {
   font-size: 2em;
 }
 
+.spaced {
+  margin-left: 1em;
+}
+
 #jump {
   position: fixed;
 
