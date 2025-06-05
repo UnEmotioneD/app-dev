@@ -102,7 +102,7 @@ main > p > span {
 
   right: 25px;
   /* don't go down more than footer */
-  bottom: 175px;
+  bottom: 145px;
 }
 #jump img {
   height: auto;
