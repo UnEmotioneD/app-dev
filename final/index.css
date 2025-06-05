@@ -116,10 +116,18 @@ main > p > span {
 footer {
   height: 100px;
 
-  /* display flex to center child elements */
+  /* to center child elements */
   display: flex;
+
+  /* stack vertically */
+  flex-direction: column;
+  /* cetner vertically */
+  justify-content: center;
+  /* center horizontally */
+  align-items: center;
+
+  gap: 0.5em;
 }
 footer > a {
-  /* center a tag with margin */
-  margin: auto;
+  text-decoration: none;
 }
