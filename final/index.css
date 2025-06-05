@@ -47,7 +47,6 @@ main {
 
 aside {
   float: left;
-  width: 250px;
 }
 aside a {
   /* a tag text in sidebar to always be black (not blue and purple) */
