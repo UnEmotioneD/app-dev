@@ -109,9 +109,12 @@ main > p > span {
   width: 60px;
 }
 
+.footer-separator {
+  width: 98%;
+}
+
 footer {
-  background-color: lightgray;
-  height: 150px;
+  height: 100px;
 
   /* display flex to center child elements */
   display: flex;
