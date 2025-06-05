@@ -112,6 +112,16 @@ main > p > span {
   margin-left: 0.5em;
 }
 
+.video-separator {
+  background-color: var(--darker-accent);
+}
+
+main hr {
+  height: 4px;
+  background-color: #000;
+  border: none;
+}
+
 #jump {
   position: fixed;
 
