@@ -95,6 +95,9 @@ video {
 }
 
 main img {
+  display: flex;
+  margin: auto;
+
   height: 500px;
   width: auto;
 }
