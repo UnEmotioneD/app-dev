@@ -94,7 +94,7 @@ main p::first-letter {
 
 /* too have space at the start of each sentence */
 main > p > span {
-  margin-left: 1em;
+  margin-left: 0.5em;
 }
 
 #jump {
