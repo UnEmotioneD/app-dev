@@ -61,16 +61,15 @@ aside a:hover {
 }
 
 main {
-  width: 850px;
+  max-width: 850px;
+  width: 100%;
 
   /* give space to #jump */
   margin-right: min(110px);
 }
 
 video {
-  display: block;
-  width: 800px;
-  margin: 0 auto;
+  width: 100%;
 }
 
 main img {
