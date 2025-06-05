@@ -33,11 +33,6 @@ header {
 #logo {
   position: absolute;
   left: 0;
-  height: 50px; /* adjust as needed */
-}
-
-/* change the size of image for logo separately */
-#logo {
   height: 100px;
 }
 
