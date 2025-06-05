@@ -83,6 +83,11 @@ main {
 
   /* give space to #jump */
   margin-right: min(110px);
+
+  background-color: var(--background-accent);
+
+  padding: 25px;
+  border-radius: 1rem;
 }
 
 video {
