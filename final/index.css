@@ -133,6 +133,15 @@ main hr {
   height: auto;
   width: 60px;
 }
+#jump img:hover {
+  background-color: var(--background-accent);
+
+  transition:
+    background-color 0.3s,
+    border-radius 0.3s;
+
+  border-radius: 1em;
+}
 
 .footer-separator {
   width: 98%;
