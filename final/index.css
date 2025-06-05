@@ -1,3 +1,9 @@
+/* declare color kind of like a variable */
+:root {
+  --background-accent: #e9e9e9;
+  --darker-accent: #a9a9a9;
+}
+
 * {
   /* border for debugging */
   border: 1px solid #000;
@@ -67,7 +73,7 @@ aside a {
   white-space: nowrap;
 }
 aside a:hover {
-  background-color: #e9e9e9;
+  background-color: var(--background-accent);
   border-radius: 1rem;
 }
 
