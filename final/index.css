@@ -32,8 +32,9 @@ header {
 /* keep the logo to top left  */
 #logo {
   position: absolute;
-  left: 0;
-  height: 100px;
+  top: 10px;
+  left: 10px;
+  height: 80px;
 }
 
 #wrapper {
