@@ -14,7 +14,7 @@
   box-sizing: border-box;
 }
 
-/* scroll smootly when jumping between tags */
+/* scroll smoothly when jumping between tags */
 html {
   scroll-behavior: smooth;
 }
@@ -29,12 +29,17 @@ body {
   font-size: 16px;
 }
 
-/* center elements inside header */
 header {
+  /* keep header at top of browser even when scrolling */
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  background-color: #fff;
+
+  /* center elements inside header */
   display: flex;
   justify-content: center;
   align-items: center;
-  position: relative;
   height: var(--header-height);
 
   /* border only at the bottom of the header */
@@ -59,8 +64,6 @@ main {
 }
 
 aside {
-  float: left;
-
   padding-left: 1rem;
   padding-right: 1rem;
 
@@ -79,7 +82,7 @@ aside a {
   text-decoration: none;
   /* a tag text in sidebar to always be black (not blue and purple) */
   color: #000;
-  /* font in sidebar to be smaller then others (16px) */
+  /* font in sidebar to be smaller than others (16px) */
   font-size: 14px;
 
   transition:
@@ -123,7 +126,7 @@ main p::first-letter {
   font-size: 2em;
 }
 
-/* too have space at the start of each sentence */
+/* to have space at the start of each sentence */
 main > p > span {
   margin-left: 0.5em;
 }
@@ -136,27 +139,6 @@ main hr {
   height: 4px;
   background-color: #000;
   border: none;
-}
-
-#jump {
-  position: fixed;
-
-  right: 25px;
-  /* don't go down more than footer */
-  bottom: 145px;
-}
-#jump img {
-  height: auto;
-  width: 60px;
-}
-#jump img:hover {
-  background-color: var(--background-accent);
-
-  transition:
-    background-color 0.3s,
-    border-radius 0.3s;
-
-  border-radius: 1em;
 }
 
 .footer-separator {
@@ -176,7 +158,7 @@ footer {
 
   /* stack vertically */
   flex-direction: column;
-  /* cetner vertically */
+  /* center vertically */
   justify-content: center;
   /* center horizontally */
   align-items: center;
