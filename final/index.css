@@ -85,9 +85,7 @@ aside a {
   /* font in sidebar to be smaller than others (16px) */
   font-size: 14px;
 
-  transition:
-    background-color 0.3s,
-    border-radius 0.3s;
+  transition: all 0.3s ease;
 
   white-space: nowrap;
 }
