@@ -1,61 +1,58 @@
-/* declare color kind of like a variable */
 :root {
   --background-accent: #e9e9e9;
   --darker-accent: #a9a9a9;
 
-  --header-height: 100px;
-  --logo-margin: 10px;
+  --header-height: 120px;
+  --logo-margin: 25px;
 }
 
 * {
-  /* border for debugging */
-  border: 1px solid #000;
-  /* keep the border inside the padding */
+  /* keep border inside the padding */
   box-sizing: border-box;
 }
 
-/* scroll smoothly when jumping between tags */
 html {
   scroll-behavior: smooth;
 }
 
 body {
-  /* remove default padding and margin */
   padding: 0;
   margin: 0;
-
-  /* specify what font to use and sizes */
   font-family: "JetBrains Mono", monospace;
   font-size: 16px;
 }
 
 header {
-  /* keep header at top of browser even when scrolling */
   position: sticky;
   top: 0;
   z-index: 1000;
   background-color: #fff;
 
-  /* center elements inside header */
   display: flex;
   justify-content: center;
   align-items: center;
   height: var(--header-height);
-
-  /* border only at the bottom of the header */
   border-bottom: 2px solid var(--background-accent);
 }
 
-/* keep the logo to top left  */
+header > h1 {
+  font-size: 48px;
+}
+
 #logo {
   position: absolute;
   top: var(--logo-margin);
-  left: var(--logo-margin);
-  height: calc((var(--header-height)) - (var(--logo-margin)) * 2);
+  height: calc(var(--header-height) - var(--logo-margin) * 2);
 }
 
 #wrapper {
   display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 25px var(--aside-left-margin);
+  gap: 2rem;
+  flex-wrap: nowrap;
 }
 
 aside,
@@ -64,11 +61,11 @@ main {
 }
 
 aside {
-  padding-left: 1rem;
-  padding-right: 1rem;
-
+  flex: 0 0 var(--aside-width);
+  margin-right: 0;
   border: 4px solid var(--background-accent);
   border-radius: 1rem;
+  padding: 1rem;
 }
 
 aside li {
@@ -77,32 +74,25 @@ aside li {
 
 aside a {
   display: inline-block;
-  /* 50 percent and 100 percent of 14px font size */
   padding: 0.5em 1em;
   text-decoration: none;
-  /* a tag text in sidebar to always be black (not blue and purple) */
   color: #000;
-  /* font in sidebar to be smaller than others (16px) */
   font-size: 14px;
-
   transition: all 0.3s ease;
-
   white-space: nowrap;
 }
-aside a:hover {
+
+aside a:hover,
+aside a:focus {
   background-color: var(--background-accent);
   border-radius: 1rem;
 }
 
 main {
+  flex: 1 1 auto;
   max-width: 850px;
   width: 100%;
-
-  /* give space to #jump */
-  margin-right: min(110px);
-
   background-color: var(--background-accent);
-
   padding: 25px;
   border-radius: 1rem;
 }
@@ -123,24 +113,25 @@ main {
     margin: 0 auto;
   }
 }
+
+/* video width to 100% width of parent element(main) */
 video {
   width: 100%;
 }
 
 main img {
+  /* to center image */
   display: flex;
   margin: auto;
 
-  height: 500px;
-  width: auto;
+  width: 80%;
 }
 
-/* first letter of the paragraph to be the 2 times of it's default size */
 main p::first-letter {
-  font-size: 2em;
+  font-size: 1.5em;
 }
 
-/* to have space at the start of each sentence */
+/* space at the start of each sentence in paragraph */
 main > p > span {
   margin-left: 0.5em;
 }
@@ -175,29 +166,27 @@ main hr {
   height: 4px;
   width: 98%;
   background-color: var(--darker-accent);
-
   border: none;
   border-radius: 1rem;
 }
 
 footer {
-  height: 100px;
-
-  /* to center child elements */
+  /* center elements inside footer */
   display: flex;
-
-  /* stack vertically */
+  /* stack elements inside footer vertically */
   flex-direction: column;
-  /* center vertically */
-  justify-content: center;
-  /* center horizontally */
-  align-items: center;
+  justify-content: center; /* vertically */
+  align-items: center; /* horizontally */
 
+  height: 100px;
   gap: 0.5em;
 }
 
 footer > a {
+  /* no blue or purple for a tag */
   text-decoration: none;
+  /* text color */
+  color: #000;
 }
 footer > a:hover {
   text-decoration: underline;
