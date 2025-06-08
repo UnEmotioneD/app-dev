@@ -60,6 +60,16 @@ main {
 
 aside {
   float: left;
+
+  padding-left: 1rem;
+  padding-right: 1rem;
+
+  border: 4px solid var(--background-accent);
+  border-radius: 1rem;
+}
+
+aside li {
+  color: var(--darker-accent);
 }
 
 aside a {
