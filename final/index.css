@@ -160,7 +160,12 @@ main hr {
 }
 
 .footer-separator {
+  height: 4px;
   width: 98%;
+  background-color: var(--darker-accent);
+
+  border: none;
+  border-radius: 1rem;
 }
 
 footer {
