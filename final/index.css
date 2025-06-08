@@ -139,6 +139,22 @@ main hr {
   border: none;
 }
 
+#jump {
+  position: absolute;
+  right: 25px;
+}
+
+#jump div:hover {
+  background-color: var(--darker-accent);
+  border-radius: 1rem;
+
+  transition: all 0.3s ease;
+}
+
+#jump img {
+  width: 60px;
+}
+
 .footer-separator {
   height: 4px;
   width: 98%;
