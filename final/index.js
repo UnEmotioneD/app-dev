@@ -38,6 +38,18 @@ function centerWrapper() {
 $(function () {
   updateLogoPosition();
   centerWrapper();
+
+  // show #links element when menu is clicked
+  $("#menu").on("click", function () {
+    $("#links").toggle();
+  });
+
+  // hide #links when mouse leaves #links or #menu
+  $("#links").on("mouseleave", function () {
+    $("#menu").on("mouseleave", function () {
+      $("#links").toggle();
+    });
+  });
 });
 
 // run them when resizing
