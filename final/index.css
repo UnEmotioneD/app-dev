@@ -1,3 +1,4 @@
+/* declare values as variables */
 :root {
   --background-accent: #e9e9e9;
   --darker-accent: #a9a9a9;
@@ -7,27 +8,32 @@
 }
 
 * {
-  /* keep border inside the padding */
-  box-sizing: border-box;
+  /* for elements layout debugging */
+  /* border: 1px solid black; */
+
+  box-sizing: border-box; /* keep border inside the padding */
 }
 
 html {
-  scroll-behavior: smooth;
+  scroll-behavior: smooth; /* when jumping between elements using a tag */
 }
 
 body {
+  /* remove default padding and margin */
   padding: 0;
   margin: 0;
+  /* set custom font */
   font-family: "JetBrains Mono", monospace;
   font-size: 16px;
 }
 
 header {
-  position: sticky;
-  top: 0;
+  position: sticky; /* show header at top even when scrolling */
+  top: 0; /* make sure it stays on top */
   z-index: 1000;
-  background-color: #fff;
+  background-color: #fff; /* dont' show what's behind */
 
+  /* layout for elements inside header */
   display: flex;
   justify-content: center;
   align-items: center;
@@ -36,6 +42,9 @@ header {
 }
 
 header > h1 {
+  /* don't let the h1 go under the logo when resizing the browser width */
+  display: block;
+  margin-left: calc(var(--header-height) - var(--logo-margin));
   font-size: 48px;
 }
 
@@ -48,11 +57,9 @@ header > h1 {
 #wrapper {
   display: flex;
   flex-direction: row;
-  justify-content: center;
+  justify-content: center; /* horizontally center */
   align-items: flex-start;
-  padding: 25px var(--aside-left-margin);
-  gap: 2rem;
-  flex-wrap: nowrap;
+  flex-wrap: nowrap; /* always keep elements in single row */
 }
 
 aside,
@@ -62,6 +69,7 @@ main {
 
 aside {
   flex: 0 0 var(--aside-width);
+
   margin-right: 0;
   border: 4px solid var(--background-accent);
   border-radius: 1rem;
@@ -74,26 +82,25 @@ aside li {
 
 aside a {
   display: inline-block;
-  padding: 0.5em 1em;
-  text-decoration: none;
+  padding: 0.5em 1em; /* 50% of 14px font-size */
+  text-decoration: none; /* remove under-score from a tag */
   color: #000;
-  font-size: 14px;
-  transition: all 0.3s ease;
-  white-space: nowrap;
-}
+  font-size: 14px; /* main font-size to 16px and others to 14px */
+  white-space: nowrap; /* keep text in single-file even in smaller width */
 
-aside a:hover,
-aside a:focus {
+  transition: all 0.3s ease; /* animation effect on hover*/
+}
+aside a:hover {
   background-color: var(--background-accent);
   border-radius: 1rem;
 }
 
 main {
   flex: 1 1 auto;
-  max-width: 850px;
-  width: 100%;
+  max-width: 850px; /* keep it from getting too big */
+  width: 100%; /* if not 100% width of #wrapper */
   background-color: var(--background-accent);
-  padding: 25px;
+  padding: 25px; /* spaces between content and border */
   border-radius: 1rem;
 }
 
@@ -110,7 +117,7 @@ main {
 
   main {
     width: 100%;
-    margin: 0 auto;
+    margin: 25px auto;
   }
 }
 
@@ -136,19 +143,20 @@ main > p > span {
   margin-left: 0.5em;
 }
 
-.video-separator {
-  background-color: var(--darker-accent);
-}
-
 main hr {
   height: 4px;
   background-color: #000;
   border: none;
 }
 
+.video-separator {
+  /* change the color for this hr only */
+  background-color: var(--darker-accent);
+}
+
 #jump {
-  position: absolute;
-  right: 25px;
+  /* hide it since it's hard to keep it well organized when resizing */
+  display: none;
 }
 
 #jump div:hover {
