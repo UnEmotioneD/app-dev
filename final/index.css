@@ -69,13 +69,9 @@ header > h1 {
 }
 
 aside {
-  margin: 25px;
-}
-
-aside {
+  /* size of the element will not expand or shrink on resize */
   flex: 0 0;
-
-  margin-right: 0;
+  margin: 25px;
   border: 4px solid var(--background-accent);
   border-radius: 1rem;
   padding: 1rem;
@@ -101,12 +97,12 @@ aside a:hover {
 }
 
 main {
+  /* size of the element can change on resize */
   flex: 1 1 auto;
   max-width: 850px; /* keep it from getting too big */
   width: 100%; /* if not 100% width of #wrapper */
   background-color: var(--background-accent);
   margin-top: 25px;
-  margin-left: 25px;
   padding: 25px; /* spaces between content and border */
   border-radius: 1rem;
 }
@@ -134,11 +130,10 @@ video {
 }
 
 main img {
-  /* to center image */
-  display: flex;
-  margin: auto;
-
-  width: 100%;
+  display: block;
+  max-width: 100%;
+  /* center image */
+  margin: 1em auto;
 }
 
 main p::first-letter {
