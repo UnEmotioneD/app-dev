@@ -46,9 +46,7 @@ $(function () {
 
   // hide #links when mouse leaves #links or #menu
   $("#links").on("mouseleave", function () {
-    $("#menu").on("mouseleave", function () {
-      $("#links").toggle();
-    });
+    $("#links").toggle();
   });
 });
 
