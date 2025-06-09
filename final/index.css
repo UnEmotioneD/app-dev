@@ -125,6 +125,10 @@ aside a,
 }
 
 aside {
+  /* show aside even when scrolling */
+  position: sticky;
+  top: 145px;
+
   /* size of the element will not expand or shrink on resize */
   flex: 0 0;
   margin: 25px;
