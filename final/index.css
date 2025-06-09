@@ -56,6 +56,13 @@ header > h1 {
   height: calc(var(--header-height) - var(--logo-margin) * 2);
 }
 
+/* elements with transition in one place */
+#menu,
+aside a,
+#jump div {
+  transition: all 0.3s ease;
+}
+
 #menu {
   position: absolute;
   top: 34px;
@@ -66,8 +73,6 @@ header > h1 {
   box-sizing: unset;
   padding: 10px;
   border-radius: 1em;
-
-  transition: all 0.3s ease;
 }
 #menu:hover {
   background-color: var(--background-accent);
@@ -98,12 +103,13 @@ header > h1 {
 }
 
 #links a {
-  text-decoration: none;
   color: #000;
+  text-decoration: none;
 }
 #links a:hover {
-  cursor: pointer;
   color: blue;
+  cursor: pointer;
+  text-decoration: underline;
 }
 
 #wrapper {
@@ -138,8 +144,6 @@ aside a {
   color: #000;
   font-size: 14px; /* main font-size to 16px and others to 14px */
   white-space: nowrap; /* keep text in single-file even in smaller width */
-
-  transition: all 0.3s ease; /* animation effect on hover*/
 }
 aside a:hover {
   background-color: var(--background-accent);
@@ -214,8 +218,6 @@ main hr {
 #jump div:hover {
   background-color: var(--darker-accent);
   border-radius: 1rem;
-
-  transition: all 0.3s ease;
 }
 
 #jump img {
@@ -250,4 +252,5 @@ footer > a {
 }
 footer > a:hover {
   text-decoration: underline;
+  color: blue;
 }
