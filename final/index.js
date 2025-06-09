@@ -1,20 +1,26 @@
+// keep spacing of logo to left edge of browser same spacing as aside
 function updateLogoPosition() {
+  // "$" in variable name since it includes jQuery objects
   const $aside = $("aside");
   const $logo = $("#logo");
 
-  if ($aside.length === 0 || $logo.length === 0) return;
+  // exit method if there is no aside
+  if ($aside.length === 0) return;
 
   const distanceFromLeft = $aside[0].getBoundingClientRect().left;
 
-  // Always keep at least 25px from the left edge
+  // always keep at least 25px from the left edge
+  // choose bigger value with .max()
   const safeLeft = Math.max(distanceFromLeft, 25);
 
+  // set style of #logo
   $logo.css("left", safeLeft + "px");
 }
 
 function centerWrapper() {
-  const browserWidth = $(window).width(); // Width of browser viewport
-  const wrapperWidth = $("#wrapper").outerWidth(); // Width including padding and border
+  // get width of elements
+  const browserWidth = $(window).width();
+  // including border and padding
   const asideWidth = $("aside").outerWidth();
   const mainWidth = $("main").outerWidth();
 
@@ -22,19 +28,19 @@ function centerWrapper() {
     browserWidth / 2 - (asideWidth + mainWidth / 2 + 50),
     0,
   );
-  const marginRight = Math.max((browserWidth - wrapperWidth) / 2, 0);
 
   $("#wrapper").css({
     "margin-left": marginLeft + "px",
-    "margin-right": marginRight + "px",
   });
 }
 
+// execute when everything is loaded
 $(function () {
   updateLogoPosition();
   centerWrapper();
 });
 
+// run them when resizing
 $(window).on("resize", function () {
   updateLogoPosition();
   centerWrapper();
