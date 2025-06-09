@@ -1,13 +1,13 @@
 function updateLogoPosition() {
-  var $aside = $("aside");
-  var $logo = $("#logo");
+  let $aside = $("aside");
+  let $logo = $("#logo");
 
   if ($aside.length === 0 || $logo.length === 0) return;
 
-  var distanceFromLeft = $aside[0].getBoundingClientRect().left;
+  let distanceFromLeft = $aside[0].getBoundingClientRect().left;
 
   // Always keep at least 25px from the left edge
-  var safeLeft = Math.max(distanceFromLeft, 25);
+  let safeLeft = Math.max(distanceFromLeft, 25);
 
   $logo.css("left", safeLeft + "px");
 }
@@ -21,4 +21,3 @@ $(document).ready(function () {
 $(window).on("resize", function () {
   updateLogoPosition();
 });
-var aside = document.querySelector("aside");
