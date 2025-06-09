@@ -44,7 +44,9 @@ header {
 header > h1 {
   /* don't let the h1 go under the logo when resizing the browser width */
   display: block;
-  margin-left: calc(var(--header-height) - var(--logo-margin));
+  white-space: nowrap; /* keep text in single-file even in smaller width */
+  /* center header text with main tag */
+  margin-left: calc(var(--header-height) - var(--logo-margin) * 2 - 25);
   font-size: 48px;
 }
 
