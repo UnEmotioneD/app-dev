@@ -55,11 +55,27 @@ function toggleLinks() {
   });
 }
 
+// since the header is sticky when jumping with a tag it needs to scroll more or less
+function customScroll() {
+  $("aside nav a").on("click", function (e) {
+    e.preventDefault(); // Prevent the default anchor behavior
+
+    const targetId = $(this).attr("href"); // get the target ID like "#arch"
+    const target = $(targetId);
+
+    if (target.length) {
+      const offset = target.offset().top - 140; // adjust scroll position
+      $("html, body").animate({ scrollTop: offset }, 400); // smooth scroll
+    }
+  });
+}
+
 // execute when everything is loaded
 $(function () {
   updateLogoPosition();
   centerWrapper();
   toggleLinks();
+  customScroll();
 });
 
 // run them when resizing
