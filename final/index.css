@@ -5,11 +5,11 @@
   --much-darker-accent: #666666;
 
   --header-height: 120px;
-  --logo-margin: 25px;
+  --spacing: 25px;
 }
 
 * {
-  /* for elements layout debugging */
+  /* for debugging layout */
   /* border: 1px solid black; */
 
   box-sizing: border-box; /* keep border inside the padding */
@@ -23,6 +23,7 @@ body {
   /* remove default padding and margin */
   padding: 0;
   margin: 0;
+
   /* set custom font */
   font-family: "JetBrains Mono", monospace;
   font-size: 16px;
@@ -32,29 +33,27 @@ header {
   position: sticky; /* show header at top even when scrolling */
   top: 0; /* make sure it stays on top */
   z-index: 1000;
-  background-color: #fff; /* dont' show what's behind */
 
   /* layout for elements inside header */
   display: flex;
   justify-content: center;
   align-items: center;
+  min-width: 675px; /* keeps elements inside the header from bunching up */
   height: var(--header-height);
+
+  background-color: #fff; /* dont' show what's behind */
   border-bottom: 2px solid var(--background-accent);
 }
-
 header > h1 {
-  /* don't let the h1 go under the logo when resizing the browser width */
-  display: block;
-  white-space: nowrap; /* keep text in single-file even in smaller width */
   /* center header text with main tag */
-  margin-left: calc(var(--header-height) - var(--logo-margin) * 2 - 25);
-  font-size: 48px;
+  margin-left: calc(var(--header-height) - var(--spacing) * 2 - 25);
+  font-size: 3rem;
 }
 
 #logo {
   position: absolute;
-  top: var(--logo-margin);
-  height: calc(var(--header-height) - var(--logo-margin) * 2);
+  top: var(--spacing);
+  height: calc(var(--header-height) - var(--spacing) * 2);
 }
 
 /* elements with transition in one place */
@@ -67,7 +66,7 @@ aside a,
 #menu {
   position: absolute;
   top: 34px;
-  right: 25px;
+  right: var(--spacing);
 
   height: 30px;
 
@@ -82,27 +81,24 @@ aside a,
 
 #links {
   position: absolute;
-
   top: 90px;
-  right: 25px;
+  right: var(--spacing);
 
-  background-color: #fff;
+  /* hide it by default */
+  display: none;
 
   padding: 1rem;
   border: 4px solid var(--background-accent);
   border-radius: 1rem;
 
-  display: none;
+  background-color: #fff;
 }
-
 #links ul {
-  /* remove bullets from ul */
-  list-style-type: none;
-
   margin: 0;
   padding: 0;
-}
 
+  list-style-type: none; /* remove bullets from ul */
+}
 #links a {
   color: #000;
   text-decoration: none;
@@ -116,39 +112,38 @@ aside a,
 #wrapper {
   display: flex;
   flex-direction: row;
-  justify-content: center; /* horizontally center */
+  justify-content: center;
   align-items: flex-start;
   flex-wrap: nowrap; /* always keep elements in single row */
 
-  /* sum of aside and main outerWidth by hand */
-  max-width: 1104px;
+  max-width: 1104px; /* sum of aside and main outerWidth by hand */
   width: 100%;
 }
 
 aside {
   /* show aside even when scrolling */
   position: sticky;
-  top: 145px;
+  top: calc(var(--header-height) + var(--spacing));
 
-  /* size of the element will not expand or shrink on resize */
-  flex: 0 0;
-  margin: 25px;
+  flex: 0 0; /* size of the element will not expand or shrink on resize */
+
+  margin: var(--spacing);
   border: 4px solid var(--background-accent);
   border-radius: 1rem;
   padding: 1rem;
 }
-
 aside li {
   color: var(--darker-accent);
 }
-
 aside a {
   display: inline-block;
-  padding: 0.5em 1em; /* 50% of 14px font-size */
-  text-decoration: none; /* remove under-score from a tag */
+  white-space: nowrap; /* keep text in single-file even in smaller width */
+
+  padding: 0.5em 1em; /* 50% and 100% of 14px font-size */
+
   color: #000;
   font-size: 14px; /* main font-size to 16px and others to 14px */
-  white-space: nowrap; /* keep text in single-file even in smaller width */
+  text-decoration: none; /* remove under-score from a tag */
 }
 aside a:hover {
   background-color: var(--background-accent);
@@ -158,12 +153,36 @@ aside a:hover {
 main {
   /* size of the element can change on resize */
   flex: 1 1 auto;
+
   max-width: 850px; /* keep it from getting too big */
   width: 100%; /* if not 100% width of #wrapper */
-  background-color: var(--background-accent);
-  margin: 25px 0;
-  padding: 25px; /* spaces between content and border */
+
+  margin: var(--spacing) 0;
   border-radius: 1rem;
+  padding: var(--spacing); /* spaces between content and border */
+
+  background-color: var(--background-accent);
+}
+/* video width to 100% width of parent element(main) */
+main video {
+  width: 100%;
+}
+main img {
+  display: block;
+  max-width: 100%;
+  margin: 1em auto; /* center image */
+}
+main p::first-letter {
+  font-size: 1.5em;
+}
+/* space at the start of each sentence in paragraph */
+main > p > span {
+  margin-left: 0.5em;
+}
+main hr {
+  height: 4px;
+  background-color: var(--much-darker-accent);
+  border: none;
 }
 
 /* hide aside when browser width is less then 900px */
@@ -179,52 +198,27 @@ main {
 
   main {
     width: 100%;
-    margin: 25px auto;
+    margin: var(--spacing) auto;
   }
 }
 
-/* video width to 100% width of parent element(main) */
-video {
-  width: 100%;
-}
-
-main img {
-  display: block;
-  max-width: 100%;
-  /* center image */
-  margin: 1em auto;
-}
-
-main p::first-letter {
-  font-size: 1.5em;
-}
-
-/* space at the start of each sentence in paragraph */
-main > p > span {
-  margin-left: 0.5em;
-}
-
-main hr {
-  height: 4px;
-  background-color: var(--much-darker-accent);
-  border: none;
-}
-
+/* change the color for this hr only */
 .video-separator {
-  /* change the color for this hr only */
   background-color: var(--darker-accent);
 }
 
+/* hide it since it's hard to keep it well organized when resizing */
 #jump {
-  /* hide it since it's hard to keep it well organized when resizing */
+  position: fixed;
+  bottom: 25px;
+  right: 25px;
+
   display: none;
 }
-
 #jump div:hover {
   background-color: var(--darker-accent);
   border-radius: 1rem;
 }
-
 #jump img {
   width: 60px;
 }
@@ -238,22 +232,17 @@ main hr {
 }
 
 footer {
-  /* center elements inside footer */
-  display: flex;
-  /* stack elements inside footer vertically */
-  flex-direction: column;
+  display: flex; /* center elements inside footer */
+  flex-direction: column; /* stack elements inside footer vertically */
   justify-content: center; /* vertically */
   align-items: center; /* horizontally */
 
   height: 100px;
   gap: 0.5em;
 }
-
 footer > a {
-  /* no blue or purple for a tag */
-  text-decoration: none;
-  /* text color */
-  color: #000;
+  text-decoration: none; /* no blue or purple for a tag */
+  color: #000; /* text color */
 }
 footer > a:hover {
   text-decoration: underline;
