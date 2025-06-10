@@ -44,9 +44,18 @@ $(function () {
     $("#links").toggle();
   });
 
-  // hide #links when mouse leaves #links or #menu
-  $("#links").on("mouseleave", function () {
-    $("#links").toggle();
+  // hide #links when clicked outside
+  $(document).on("click", function (e) {
+    if (!$(e.target).closest("#links").length && !$(e.target).is("#menu")) {
+      $("#links").hide();
+    }
+  });
+
+  // close when ESC is pressed
+  $(document).on("keydown", function (e) {
+    if (e.key === "Escape") {
+      $("#links").hide();
+    }
   });
 });
 
