@@ -274,12 +274,10 @@ summary {
 
 footer {
   display: flex; /* center elements inside footer */
-  flex-direction: column; /* stack elements inside footer vertically */
   justify-content: center; /* vertically */
   align-items: center; /* horizontally */
 
   height: 100px;
-  gap: 0.5em;
 }
 footer > a {
   text-decoration: none; /* no blue or purple for a tag */
