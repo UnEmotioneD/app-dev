@@ -137,8 +137,71 @@
             cursor-trail on the Windows since you don't use mouse on
             terminal.</span
           >
-          <br />
         </p>
+
+        <details>
+          <summary>Comparison to other terminals</summary>
+
+          <table id="term-table">
+            <thead>
+              <tr>
+                <th class="empty-th"></th>
+                <th>Kitty</th>
+                <th>Alacritty</th>
+                <th>Wezterm</th>
+                <th>Ghostty</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr class="ox">
+                <th>Image</th>
+                <td>O</td>
+                <td>X</td>
+                <td>O</td>
+                <td>O</td>
+              </tr>
+              <tr class="ox">
+                <th>Ligature</th>
+                <td>O</td>
+                <td>X</td>
+                <td>O</td>
+                <td>O</td>
+              </tr>
+              <tr class="tbl-long-text">
+                <th>Issue with typing Korean</th>
+                <td>
+                  <ul>
+                    <li>Mostly bad</li>
+                    <li>(But OK in Arch)</li>
+                  </ul>
+                </td>
+                <td>
+                  <ul>
+                    <li>Special character needs to be typed twice</li>
+                  </ul>
+                </td>
+                <td>
+                  <ul>
+                    <li>Initial character gets separated</li>
+                  </ul>
+                </td>
+                <td>
+                  <ul>
+                    <li>BS erase extra character</li>
+                    <li>Press enter twice to change line</li>
+                  </ul>
+                </td>
+              </tr>
+              <tr class="ox">
+                <th>Speicalty</th>
+                <td>Cursor Trail</td>
+                <td>Written in Rust</td>
+                <td>Lua for configuration</td>
+                <td>Very Hyped</td>
+              </tr>
+            </tbody>
+          </table>
+        </details>
 
         <hr />
 

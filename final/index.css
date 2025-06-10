@@ -185,6 +185,47 @@ main hr {
   border: none;
 }
 
+details {
+  margin-bottom: 1.5rem;
+}
+
+summary {
+  margin-bottom: 0.5rem;
+}
+
+#term-table {
+  width: 100%;
+  border: 2px solid var(--much-darker-accent);
+  background-color: var(--background-accent);
+  border-collapse: collapse; /* important for single borders */
+}
+
+#term-table thead {
+  background-color: var(--darker-accent);
+  color: white;
+}
+
+#term-table th,
+#term-table td {
+  padding: 0.5rem;
+  text-align: left;
+  border: 1px solid var(--much-darker-accent); /* add consistent border */
+}
+
+#term-table th {
+  width: 20%;
+  text-align: center;
+}
+
+#term-table td ul {
+  margin: 0;
+  padding-left: 1.2em;
+}
+
+#term-table td li {
+  margin: 0.25rem 0;
+}
+
 /* hide aside when browser width is less then 900px */
 @media (max-width: 900px) {
   #wrapper {
