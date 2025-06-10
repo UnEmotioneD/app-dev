@@ -34,11 +34,7 @@ function centerWrapper() {
   });
 }
 
-// execute when everything is loaded
-$(function () {
-  updateLogoPosition();
-  centerWrapper();
-
+function toggleLinks() {
   // show #links element when menu is clicked
   $("#menu").on("click", function () {
     $("#links").toggle();
@@ -57,6 +53,13 @@ $(function () {
       $("#links").hide();
     }
   });
+}
+
+// execute when everything is loaded
+$(function () {
+  updateLogoPosition();
+  centerWrapper();
+  toggleLinks();
 });
 
 // run them when resizing
