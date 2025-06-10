@@ -2,6 +2,7 @@
 :root {
   --background-accent: #e9e9e9;
   --darker-accent: #a9a9a9;
+  --much-darker-accent: #666666;
 
   --header-height: 120px;
   --logo-margin: 25px;
@@ -205,7 +206,7 @@ main > p > span {
 
 main hr {
   height: 4px;
-  background-color: #000;
+  background-color: var(--much-darker-accent);
   border: none;
 }
 
